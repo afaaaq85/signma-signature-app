@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.light-theme {
+    --background-color: white;
+    --text-color: #333333;
+    --text-color2: gray;
+    --icon-hover: #333333;
+    --btn-background-hover: #e1f7f5;
+    --newChat-background: rgb(211, 211, 211);
+    --scroll-bar: rgba(241, 241, 241, 0.7);
+  }
+  
+  .dark-theme {
+    --background-color: #1e1e1e;
+    --text-color: #f0f0f0;
+    --text-color2: rgb(225, 225, 225);
+    --icon-hover: #ababab;
+    --btn-background-hover: rgb(67, 67, 67);
+    --newChat-background: rgb(41, 41, 41);
+    --scroll-bar: rgba(78, 78, 78, 0.7);
+  }
+
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.5s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.theme-btn{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    margin: 20px;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid var(--text-color);
+    background-color: rgb(92, 111, 255);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px var(--text-color);
+}
+label{
+    width: 100px;
+}
+input{
+    width: 100px;
+    padding: 5px;
+    border: 1px solid var(--text-color);
+    text-align: center;
+    border-radius: 10px;
+}
+canvas{
+    border-radius: 25px;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
 }
