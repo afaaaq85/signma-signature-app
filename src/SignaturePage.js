@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 
 const SignaturePage = () => {
   const canvasRef = useRef(null);
-  const [fontSize, setFontSize] = useState(10);
+  const [fontSize, setFontSize] = useState(1);
   const [isDrawing, setIsDrawing] = useState(false);
   const lastPosition = useRef({ x: 0, y: 0 });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -115,7 +115,7 @@ const SignaturePage = () => {
 
       <div className="d-flex align-items-center justify-content-center my-4">
         <label htmlFor="fontSizeInput" className="m-0 p-0">
-          Font Size:
+          Line thickness:
         </label>
         <input
           type="number"
@@ -125,7 +125,7 @@ const SignaturePage = () => {
         />
       </div>
 
-      <div className="col-sm-6 col-12 d-flex flex-column align-items-center gap-3">
+      <div className=" d-flex flex-column align-items-center gap-3">
         <canvas
           ref={canvasRef}
           width={windowWidth > 750 ? 600 : windowWidth < 500 ? 300 : 400}
@@ -137,7 +137,7 @@ const SignaturePage = () => {
           onTouchEnd={handleEnd}
           onTouchCancel={handleEnd}
         />
-        <div className="d-flex align-items-center justify-content-center gap-2">
+        <div className="d-flex align-items-center justify-content-center gap-2 mb-3">
           <button className="btn btn-primary" onClick={handleClear}>
             Clear
           </button>
